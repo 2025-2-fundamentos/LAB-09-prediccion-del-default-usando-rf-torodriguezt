@@ -195,7 +195,6 @@ def ensamblar_busqueda() -> GridSearchCV:
 
 def empaquetar_metricas(etiqueta: str, y_true, y_pred) -> dict:
     return {
-        "type": "metrics",
         "dataset": etiqueta,
         "precision": precision_score(y_true, y_pred, zero_division=0),
         "balanced_accuracy": balanced_accuracy_score(y_true, y_pred),
